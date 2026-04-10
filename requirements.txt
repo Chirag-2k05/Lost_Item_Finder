@@ -1,0 +1,8 @@
+streamlit
+pymongo
+scikit-learn
+speechrecognition
+pyttsx3
+pyaudio
+pillow
+numpy
