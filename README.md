@@ -4,6 +4,10 @@ A simple and efficient web application to **store, search, and manage lost items
 
 ---
 
+## 🌐 Live Demo
+
+[![Open App](https://img.shields.io/badge/Streamlit-Live_App-red?style=for-the-badge&logo=streamlit)](https://lostitemfinder-jwrrq3rh5j7dj8222hrfem.streamlit.app/)
+
 ## 🚀 Features
 
 * 🔐 User Authentication (Login & Signup)
