@@ -15,7 +15,13 @@ DATA_FILE = "data.csv"
 # -----------------------------
 def load_users():
     if os.path.exists(USER_FILE):
-        return pd.read_csv(USER_FILE)
+        try:
+            df = pd.read_csv(USER_FILE)
+            if df.empty:
+                return pd.DataFrame(columns=["username", "password"])
+            return df
+        except pd.errors.EmptyDataError:
+            return pd.DataFrame(columns=["username", "password"])
     else:
         return pd.DataFrame(columns=["username", "password"])
 
@@ -27,7 +33,13 @@ def save_users(df):
 # -----------------------------
 def load_data():
     if os.path.exists(DATA_FILE):
-        return pd.read_csv(DATA_FILE)
+        try:
+            df = pd.read_csv(DATA_FILE)
+            if df.empty:
+                return pd.DataFrame(columns=["user", "item", "location", "description"])
+            return df
+        except pd.errors.EmptyDataError:
+            return pd.DataFrame(columns=["user", "item", "location", "description"])
     else:
         return pd.DataFrame(columns=["user", "item", "location", "description"])
 
